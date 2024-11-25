@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "./_components/Navbar";
 import UpperHeader from "./_components/UpperHeader";
 import "./globals.css";
@@ -8,16 +8,21 @@ export const metadata = {
 };
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ["latin"] });
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "600", "700", "900"], // Correct property name
+});
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
         <UpperHeader />
         <Navbar />
 
-        {children}
+        <main>
+          <div className="container mx-auto">{children}</div>
+        </main>
       </body>
     </html>
   );

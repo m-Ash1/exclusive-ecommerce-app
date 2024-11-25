@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
     "@heroicons/react": "^2.2.0",
+    "@mui/material": "^6.1.8",
     "flowbite": "^2.5.2",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
