@@ -1,4 +1,5 @@
 import ActionButton from "./_components/ActionButton";
+import BannerBox from "./_components/BannerBox";
 import CardList from "./_components/CardList";
 import CategoryList from "./_components/CategoryList";
 import MainPanner from "./_components/MainPanner";
@@ -17,17 +18,20 @@ export default function Home() {
         <SideNavigation />
         <MainPanner />
       </section>
+
       <section className="py-20  ">
         <SectionHeader>Today&apos;s</SectionHeader>
         <SectionTitle title="Flash Sales" render={<NavigationButtons />}>
           <Timer />
         </SectionTitle>
-        <CardList />
+        <CardList slice={4} />
         <div className="flex justify-center mt-6">
           <ActionButton>View All Products</ActionButton>
         </div>
       </section>
+
       <div className="hidden md:block h-[1px] bg-gray-200 w-full"></div>
+
       <section className="py-20">
         <SectionHeader>Categories</SectionHeader>
         <SectionTitle
@@ -36,14 +40,36 @@ export default function Home() {
         />
         <CategoryList />
       </section>
+
       <div className="hidden md:block h-[1px] bg-gray-200 w-full"></div>
+
       <section className="py-20">
         <SectionHeader>This Month</SectionHeader>
         <SectionTitle
           title="Best Selling Products"
           render={<ActionButton>View All</ActionButton>}
         />
-        <CardList />
+        <CardList slice={4} />
+      </section>
+
+      <section className="py-20">
+        <BannerBox />
+      </section>
+
+      <section className="py-20">
+        <SectionHeader>Our Products</SectionHeader>
+        <SectionTitle
+          title="Explore Our Products"
+          render={<NavigationButtons />}
+        />
+        <CardList slice={8} />
+        <div className="flex justify-center mt-6">
+          <ActionButton>View All Products</ActionButton>
+        </div>
+      </section>
+      <section className="py-20">
+        <SectionHeader>Featured</SectionHeader>
+        <SectionTitle title="New Arrival" />
       </section>
     </>
   );

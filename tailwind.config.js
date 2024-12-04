@@ -15,6 +15,7 @@ module.exports = {
         primary: "#FAFAFA",
         bgPrimary: "#000000",
         bgSecondary: "#F5F5F5",
+        buttonSecondary: "#00FF66 ",
       },
     },
   },

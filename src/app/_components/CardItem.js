@@ -7,13 +7,16 @@ function CardItem({ product }) {
   product.rating = Math.random() * 5;
   product.ratingCount = Math.ceil(Math.random() * 200);
   product.priceBeforeDiscount = product.price * (1 + DISCOUNT);
+  console.log(product);
+  const image = product.images[0].replace(/[\\\[\]"]/g, "");
+
   return (
     <div>
       <div className="image-container">
         <div className="image">
           <div className="relative h-[300px]">
             <Image
-              src={product.images[0]}
+              src={image}
               alt={product.title}
               fill
               className="aspect-square"
